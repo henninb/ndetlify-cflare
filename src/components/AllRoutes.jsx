@@ -13,9 +13,9 @@ export default function AllRoutes() {
           <Routes>
             <Route path="/landing" element={<Landing />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/nhl" element={<HockeyScores />} />
-            <Route element={<ProtectedRoutes />}>
               <Route path="/" element={<Home />} />
+            <Route element={<ProtectedRoutes />}>
+              <Route path="/nhl" element={<HockeyScores />} />
             </Route>
           </Routes>
       </BrowserRouter>
