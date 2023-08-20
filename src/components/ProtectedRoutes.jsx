@@ -24,7 +24,7 @@ export default function ProtectedRoutes() {
   }
 
   const authApiCall = async (payload) => {
-    console.log('authApiCall');
+    console.log('authApiCall' + payload);
 
     try {
     const response = await axios.post("/api/login", {
@@ -35,6 +35,7 @@ export default function ProtectedRoutes() {
       },
     });
 
+    console.log(response.data);
     return response.data;
     } catch ( error ) {
       console.log(error.data);
