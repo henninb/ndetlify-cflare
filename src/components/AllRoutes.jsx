@@ -15,10 +15,10 @@ export default function AllRoutes() {
     <div>
       <BrowserRouter>
           <Routes>
-            <Route path="/" exact element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/landing" exact element={<Landing />} />
-            <Route path="/about" exact element={<About />} />
+            <Route path="/landing" element={<Landing />} />
+            <Route path="/about" element={<About />} />
             
             <Route element={<ProtectedRoutes />}>
               

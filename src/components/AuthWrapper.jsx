@@ -29,13 +29,14 @@ export default function AuthWrapper() {
           setUser({...user, isAuthenticated: false})
      }
 
+     console.log('isAuthenticated:' + user.isAuthenticated)
 
      return (
                <AuthContext.Provider value={{user, login, logout}}>
                     <>
                     <Routes>
                     if (user.isAuthenticated) {
-                      <Route path="/test" exact element={<Test />} />
+                      <Route path="/test" element={<Test />} />
                     }
                     </Routes>
                     

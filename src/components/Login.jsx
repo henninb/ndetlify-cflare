@@ -1,4 +1,6 @@
 import axios from "axios";
+import AuthWrapper from "./AuthWrapper";
+
 export default function Login() {
     // const [state, setState] = useState({
     // email: "",
@@ -43,11 +45,13 @@ export default function Login() {
     console.log(data);
     // console.log(state);
     // console.log("send: " + JSON.stringify(data));
+    //AuthWrapper.login(email, password);
 
     try {
       let response = await userLogin(data);
       console.log("response: " + JSON.stringify(response));
-      window.location.href = '/landing'
+      
+      //window.location.href = '/landing'
     } catch (error) {
       // console.log(error.data);
       //window.location.href = '/login'
