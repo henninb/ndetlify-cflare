@@ -48,6 +48,7 @@ export default function ProtectedRoutes() {
 
     console.log('fetchUserAuth');
     const token = await getCookies();
+    console.log(token);
     if( token && token["access-token"] ) {
       const authBoolean = await authApiCall(token["access-token"]);
       if( authBoolean === true ) {
