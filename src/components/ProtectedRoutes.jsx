@@ -38,7 +38,7 @@ export default function ProtectedRoutes() {
     return response.data;
     } catch ( error ) {
       console.log(error.data);
-      window.location.href = '/login'
+      //window.location.href = '/login'
     }
     return false
   };
@@ -54,8 +54,9 @@ export default function ProtectedRoutes() {
         return true
       }
     }
+    console.log('not authorized');
     setAuth(false)
-    window.location.href = '/login'
+    //window.location.href = '/login'
     return false
   }, []);
 
