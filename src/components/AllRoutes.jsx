@@ -11,11 +11,11 @@ export default function AllRoutes() {
     <div>
       <BrowserRouter>
           <Routes>
-            <Route path="/landing" element={<Landing />} />
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route element={<ProtectedRoutes />}>
               <Route path="/nhl" element={<HockeyScores />} />
+              <Route path="/landing" element={<Landing />} />
             </Route>
           </Routes>
       </BrowserRouter>
