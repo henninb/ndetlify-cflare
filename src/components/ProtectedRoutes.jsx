@@ -27,7 +27,7 @@ export default function ProtectedRoutes() {
     console.log('authApiCall');
 
     try {
-    const response = await axios.get("/api/auth", {
+    const response = await axios.post("/api/login", {
       timeout: 0,
       headers: {
         "Content-Type": "application/text",

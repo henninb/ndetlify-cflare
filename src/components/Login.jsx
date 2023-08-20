@@ -51,7 +51,7 @@ export default function Login() {
     } catch (error) {
       // console.log(error.data);
       //window.location.href = '/login'
-      if (error.response && error.response.status === 401) {
+      if (error.response && error.response.status === 403) {
         const errorMessage = document.querySelector(".error-message");
         errorMessage.innerText = "Failed login. Please check your credentials.";
       }
