@@ -24,7 +24,6 @@ export const AuthWrapper = () => {
           })
      }
      const logout = () => {
-
           setUser({...user, isAuthenticated: false})
      }
 
