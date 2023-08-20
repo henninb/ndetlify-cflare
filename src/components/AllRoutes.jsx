@@ -5,17 +5,20 @@ import Landing from "./Landing";
 import HockeyScores from "./HockeyScores";
 import Home from "./Home";
 import ProtectedRoutes from "./ProtectedRoutes";
+import PrivateRoute from "./PrivateRoute";
 
 export default function AllRoutes() {
   return (
     <div>
       <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" exact element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route element={<ProtectedRoutes />}>
-              <Route path="/nhl" element={<HockeyScores />} />
-              <Route path="/landing" element={<Landing />} />
+              <Route path="/landing" exact element={<Landing />} />
+            </Route>
+            <Route element={<PrivateRoute />}>
+              <Route path="/nhl" exact element={<HockeyScores />} />
             </Route>
           </Routes>
       </BrowserRouter>

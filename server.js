@@ -14,7 +14,12 @@ app.use((_request, response, next) => {
 app.listen(port, () => { console.log(`listening on port ${port}`) });
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.post('/api/login', (_request, response) => {
-  console.log('Got body:', req.body);
-  response.send('test');
+app.post('/api/login', (request, response) => {
+  console.log('Got body:', request.body);
+  //response.status(200).json({ message: 'test' });
+  response.status(200).json({
+    accessToken: 'test',
+    roles: ['admin'],
+  })
 });
+
