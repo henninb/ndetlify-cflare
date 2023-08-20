@@ -15,6 +15,9 @@ export default class App extends Component {
         <a className="nav-link" href="/nhl">NHL</a>
       </li>
       <li className="nav-item">
+        <a className="nav-link" href="/landing">Landing</a>
+      </li>
+      <li className="nav-item">
         <a className="nav-link" href="/login">Login</a>
       </li>
     </ul>
