@@ -7,8 +7,8 @@ import Home from "./Home";
 import ProtectedRoutes from "./ProtectedRoutes";
 import PrivateRoute from "./PrivateRoute";
 import AuthWrapper from "./AuthWrapper";
-import About from "./Abount";
-import Test from "./Test";
+import About from "./About";
+
 
 export default function AllRoutes() {
   return (
@@ -19,14 +19,16 @@ export default function AllRoutes() {
             <Route path="/login" element={<Login />} />
             <Route path="/landing" exact element={<Landing />} />
             <Route path="/about" exact element={<About />} />
-            <Route path="/test" exact element={<Test />} />
+            
             <Route element={<ProtectedRoutes />}>
               
             </Route>
             <Route element={<PrivateRoute />}>
               <Route path="/nhl" exact element={<HockeyScores />} />
             </Route>
+          
           </Routes>
+          <AuthWrapper />
       </BrowserRouter>
     </div>
   );
