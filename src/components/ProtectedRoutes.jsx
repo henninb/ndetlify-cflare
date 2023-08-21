@@ -1,9 +1,11 @@
 import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
-import { Outlet } from "react-router-dom";
+import { Outlet, Navigate } from "react-router-dom";
 
 export default function ProtectedRoutes() {
   const [auth, setAuth] = useState(null);
+
+  let isAuthenticated = localStorage.getItem('isAuthenticated');
 
   async function getCookies() {
       console.log('getCookies');
@@ -30,7 +32,7 @@ export default function ProtectedRoutes() {
     const response = await axios.post("/api/login", {
       timeout: 0,
       headers: {
-        "Content-Type": "application/text",
+        "Content-Type": "application/json",
         "Authorization": "Bearer " + payload
       },
     });
@@ -71,6 +73,6 @@ export default function ProtectedRoutes() {
   //pass the auth token to the Outlet
     //auth ? <Outlet /> : <Navigate to="/login" />
   return (
-    auth ? <Outlet /> : null
+    isAuthenticated ? <Outlet /> : <Navigate to="/login" />
   )
 }

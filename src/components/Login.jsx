@@ -51,6 +51,7 @@ export default function Login() {
     //AuthWrapper.login(email, password);
 
     try {
+      localStorage.setItem("isAuthenticated", true);
       let response = await userLogin(data);
       console.log("response: " + JSON.stringify(response));
 
