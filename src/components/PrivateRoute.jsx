@@ -21,7 +21,7 @@ export default function PrivateRoute() {
 
     //let auth = {'token':false}
     //let myLogin = login('henninb', 'monday1');
-    let isAuthenticated = true;
+    let isAuthenticated = false;
 
     return(
         // auth.token ? <Outlet /> : <Navigate to="/login" />

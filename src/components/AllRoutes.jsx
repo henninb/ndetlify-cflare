@@ -19,14 +19,11 @@ export default function AllRoutes() {
             <Route path="/login" element={<Login />} />
             <Route path="/landing" element={<Landing />} />
             <Route path="/about" element={<About />} />
-            
             <Route element={<ProtectedRoutes />}>
-              
             </Route>
             <Route element={<PrivateRoute />}>
               <Route path="/nhl" exact element={<HockeyScores />} />
             </Route>
-          
           </Routes>
           <AuthWrapper />
       </BrowserRouter>
