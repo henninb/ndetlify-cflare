@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from "react"
-import Test from "./Test";
-import { Route, Routes } from "react-router-dom";
+// import Test from "./Test";
+import { Routes } from "react-router-dom";
 //import { RenderHeader } from "../components/structure/Header";
 //import { RenderMenu, RenderRoutes } from "../components/structure/RenderNavigation";
 
@@ -36,7 +36,6 @@ export default function AuthWrapper() {
                     <>
                     <Routes>
                     if (user.isAuthenticated) {
-                      <Route path="/test" element={<Test />} />
                     }
                     </Routes>
                     </>
