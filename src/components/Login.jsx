@@ -56,7 +56,6 @@ export default function Login() {
 
       await login(email, password);
       //navigate("/landing")
-      
       window.location.href = '/landing'
     } catch (error) {
       // console.log(error.data);
