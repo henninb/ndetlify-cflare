@@ -1,5 +1,6 @@
 import axios from "axios";
-import AuthWrapper from "./AuthWrapper";
+import AuthData from "./AuthWrapper";
+//import { useNavigate } from "react-router-dom";
 
 export default function Login() {
     // const [state, setState] = useState({
@@ -31,6 +32,8 @@ export default function Login() {
   };
 
   const handleClick = async (event) => {
+    const { login } = AuthData();
+    //const navigate = useNavigate();
     console.log("login submit was clicked");
     event.preventDefault();
 
@@ -48,10 +51,13 @@ export default function Login() {
     //AuthWrapper.login(email, password);
 
     try {
-      let response = await userLogin(data);
-      console.log("response: " + JSON.stringify(response));
+      //let response = await userLogin(data);
+      //console.log("response: " + JSON.stringify(response));
+
+      await login(email, password);
+      //navigate("/landing")
       
-      //window.location.href = '/landing'
+      window.location.href = '/landing'
     } catch (error) {
       // console.log(error.data);
       //window.location.href = '/login'
