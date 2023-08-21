@@ -6,7 +6,7 @@ export const AuthData = () => useContext(AuthContext);
 
 export default function PrivateRoute() {
 
-    const [user, _setUser] = useState({name: "", isAuthenticated: false});
+    //const [user, setUser] = useState({name: "", isAuthenticated: false});
 
     // const login = (userName, passwd) => {
     //   return new Promise((resolve, reject) => {
@@ -21,8 +21,10 @@ export default function PrivateRoute() {
 
     //let auth = {'token':false}
     //let myLogin = login('henninb', 'monday1');
+    let isAuthenticated = true;
+
     return(
         // auth.token ? <Outlet /> : <Navigate to="/login" />
-        user.isAuthenticated ? <Outlet /> : <Navigate to="/login" />
+        isAuthenticated ? <Outlet /> : <Navigate to="/login" />
     )
 }
