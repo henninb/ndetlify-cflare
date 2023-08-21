@@ -51,8 +51,8 @@ export default function Login() {
     //AuthWrapper.login(email, password);
 
     try {
-      //let response = await userLogin(data);
-      //console.log("response: " + JSON.stringify(response));
+      let response = await userLogin(data);
+      console.log("response: " + JSON.stringify(response));
 
       await login(email, password);
       //navigate("/landing")

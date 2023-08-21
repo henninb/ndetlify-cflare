@@ -6,7 +6,7 @@ export const AuthData = () => useContext(AuthContext);
 
 export default function PrivateRoute() {
 
-    const [user, setUser] = useState({name: "", isAuthenticated: false});
+    const [user, _setUser] = useState({name: "", isAuthenticated: false});
 
     // const login = (userName, passwd) => {
     //   return new Promise((resolve, reject) => {
