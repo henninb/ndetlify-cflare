@@ -8,9 +8,12 @@ import ProtectedRoutes from "./ProtectedRoutes";
 import PrivateRoute from "./PrivateRoute";
 import AuthWrapper from "./AuthWrapper";
 import About from "./About";
-
+import Test from "./Test";
+//import { createContext, useContext } from "react";
 
 export default function AllRoutes() {
+  //const AuthContext = createContext();
+  //const AuthData = () => useContext(AuthContext);
   return (
     <div>
       <BrowserRouter>
@@ -20,9 +23,10 @@ export default function AllRoutes() {
             <Route path="/landing" element={<Landing />} />
             <Route path="/about" element={<About />} />
             <Route element={<ProtectedRoutes />}>
+              <Route path="/nhl" exact element={<HockeyScores />} />
+              <Route path="/about" element={<Test />} />
             </Route>
             <Route element={<PrivateRoute />}>
-              <Route path="/nhl" exact element={<HockeyScores />} />
             </Route>
           </Routes>
           <AuthWrapper />
