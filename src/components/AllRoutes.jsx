@@ -5,7 +5,6 @@ import Landing from "./Landing";
 import HockeyScores from "./HockeyScores";
 import Home from "./Home";
 import ProtectedRoutes from "./ProtectedRoutes";
-import PrivateRoute from "./PrivateRoute";
 import AuthWrapper from "./AuthWrapper";
 import About from "./About";
 import Test from "./Test";
@@ -20,13 +19,11 @@ export default function AllRoutes() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/landing" element={<Landing />} />
             <Route path="/about" element={<About />} />
             <Route element={<ProtectedRoutes />}>
               <Route path="/nhl" exact element={<HockeyScores />} />
-              <Route path="/about" element={<Test />} />
-            </Route>
-            <Route element={<PrivateRoute />}>
+              <Route path="/test" element={<Test />} />
+              <Route path="/landing" element={<Landing />} />
             </Route>
           </Routes>
           <AuthWrapper />
