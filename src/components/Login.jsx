@@ -53,11 +53,11 @@ export default function Login() {
 
     try {
       //sessionStorage.removeItem(keyname)
-      sessionStorage.setItem("isAuthenticated", true);
-      //localStorage.setItem("isAuthenticated", true);
+
       let response = await userLogin(data);
       console.log("response: " + JSON.stringify(response));
-
+      sessionStorage.setItem("isAuthenticated", true);
+      //localStorage.setItem("isAuthenticated", true);
       //await login(email, password);
       //navigate("/landing")
       window.location.href = '/landing'

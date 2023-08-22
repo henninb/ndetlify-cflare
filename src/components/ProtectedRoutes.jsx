@@ -5,7 +5,8 @@ import { Outlet, Navigate } from "react-router-dom";
 export default function ProtectedRoutes() {
   const [auth, setAuth] = useState(null);
 
-  let isAuthenticated = localStorage.getItem('isAuthenticated');
+  //let isAuthenticated = localStorage.getItem('isAuthenticated');
+  let isAuthenticated = sessionStorage.getItem('isAuthenticated');
 
   async function getCookies() {
       console.log('getCookies');
@@ -41,7 +42,6 @@ export default function ProtectedRoutes() {
     return response.data;
     } catch ( error ) {
       console.log(error.data);
-      //window.location.href = '/login'
     }
     return false
   };
@@ -70,9 +70,8 @@ export default function ProtectedRoutes() {
     }
   }, [fetchUserAuth, auth])
 
-  //pass the auth token to the Outlet
-    //auth ? <Outlet /> : <Navigate to="/login" />
+
   return (
-    isAuthenticated ? <Outlet /> : <Navigate to="/login" />
+    isAuthenticated === 'true' ? <Outlet /> : <Navigate to="/login" />
   )
 }
