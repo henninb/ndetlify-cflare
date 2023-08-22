@@ -1,8 +1,5 @@
 import { createContext, useContext, useState } from "react"
-// import Test from "./Test";
 import { Routes } from "react-router-dom";
-//import { RenderHeader } from "../components/structure/Header";
-//import { RenderMenu, RenderRoutes } from "../components/structure/RenderNavigation";
 
 const AuthContext = createContext();
 export const AuthData = () => useContext(AuthContext);

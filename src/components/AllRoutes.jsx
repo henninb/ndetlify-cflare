@@ -5,7 +5,6 @@ import Landing from "./Landing";
 import HockeyScores from "./HockeyScores";
 import Home from "./Home";
 import ProtectedRoutes from "./ProtectedRoutes";
-import AuthWrapper from "./AuthWrapper";
 import About from "./About";
 import Test from "./Test";
 //import { createContext, useContext } from "react";
@@ -26,7 +25,6 @@ export default function AllRoutes() {
               <Route path="/landing" element={<Landing />} />
             </Route>
           </Routes>
-          <AuthWrapper />
       </BrowserRouter>
     </div>
   );
