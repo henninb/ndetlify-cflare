@@ -60,7 +60,7 @@ export default function Login() {
       //localStorage.setItem("isAuthenticated", true);
       //await login(email, password);
       //navigate("/landing")
-      window.location.href = '/landing'
+      //window.location.href = '/landing'
       //<Navigate to="/landing" />
     } catch (error) {
       // console.log(error.data);
