@@ -74,7 +74,6 @@ export default function Login() {
   };
 
     return (
-        test
         <div className="login">
             <div className="form">
                 <form name="login-form" className="login-form" action="https://api.bhenning.com/api/login" method="POST" data-bitwarden-watching="1">
@@ -97,7 +96,7 @@ export default function Login() {
                <div className="error-message"></div>
              </div>
       <button type="submit" onClick={handleClick}>
-            login
+            login1
           </button>
                 </form>
             </div>
