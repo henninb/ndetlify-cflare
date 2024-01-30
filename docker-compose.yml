@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  react-app:
+    image: react-app
+    hostname: react-app
+    container_name: react-app
+    restart: always
+    build:
+      context: ./
+      args:
+        - TIMEZONE=America/Chicago
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"

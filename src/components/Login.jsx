@@ -96,7 +96,7 @@ export default function Login() {
                <div className="error-message"></div>
              </div>
       <button type="submit" onClick={handleClick}>
-            login1
+            login
           </button>
                 </form>
             </div>
