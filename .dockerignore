@@ -2,3 +2,6 @@ build
 .netlify
 node_modules
 *.tar
+readme.md
+.git
+.gitignore
