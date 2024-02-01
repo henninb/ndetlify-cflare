@@ -1,7 +1,8 @@
 FROM node:alpine
 
 WORKDIR /app
-COPY . .
+COPY server/ .
 RUN npm install
 #CMD ["node", "server.js"]
-CMD ["npm", "start"]
+# CMD ["npm", "start"]
+CMD ["node", "server.js"]
