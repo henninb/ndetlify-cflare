@@ -18,8 +18,8 @@ export default function Login() {
   // };
 
   const userLogin = async (payload) => {
-    //let endpoint =  '/api-login';
-    let endpoint =  'https://api.bhenning.com/api-login';
+    let endpoint =  '/api/login';
+    //let endpoint =  'https://api.bhenning.com/api-login';
 
     const response = await axios.post(endpoint, payload, {
       timeout: 0,
