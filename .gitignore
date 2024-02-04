@@ -2,3 +2,4 @@ build
 .netlify
 node_modules
 *.tar
+server/public

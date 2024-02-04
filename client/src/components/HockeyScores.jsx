@@ -61,7 +61,7 @@ export default function HockeyScores() {
 
   const fetchHockeySchedule = useCallback(async () => {
        try {
-        const response = await axios.get("/feed/json/nhl-2022/minnesota-wild")
+        const response = await axios.get("/api/nhl")
          console.log(response.data);
          setData(response.data);
        } catch(error) {

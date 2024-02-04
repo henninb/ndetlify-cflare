@@ -1,7 +1,7 @@
-// import './App.css';
-
 import React, { Component } from "react";
 import AllRoutes from "./components/AllRoutes";
+import './App.css';
+
 export default class App extends Component {
 
 

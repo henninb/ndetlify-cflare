@@ -2,6 +2,7 @@ const express = require('express')
 const path = require('path');
 const jwt = require('jsonwebtoken');
 const bodyParser = require('body-parser');
+const axios = require('axios');
 
 const port = 3000
 const app = express();
@@ -21,13 +22,27 @@ app.use((_request, response, next) => {
 app.use(express.static(path.join(__dirname, 'public'), {
 }));
 
-app.get('*', (_req,res) =>{
-    res.sendFile(path.join(__dirname+'/public/index.html'));
+app.get(/^(?!\/api).*/, (_request, response) => {
+    response.sendFile(path.join(__dirname+'/public/index.html'));
 });
 
 app.listen(port, () => { console.log(`listening on port ${port}`) });
 
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.get('/api/nhl', (_request, response) => {
+  const url = 'https://fixturedownload.com/feed/json/nhl-2023/minnesota-wild';
+
+  axios.get(url)
+    .then(res => {
+      // If the request is successful, send the JSON response back to the client
+      response.status(200).json(res.data);
+    })
+    .catch(error => {
+      console.error('Error fetching NHL schedule:', error);
+      response.status(500).send('Error fetching data');
+    });
+});
 
 app.post('/api/login', (request, response) => {
   console.log('body:', request.body);
