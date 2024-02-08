@@ -1,25 +1,11 @@
 import axios from "axios";
-//import { Navigate } from "react-router-dom";
-//import AuthData from "./AuthWrapper";
-//import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
-    // const [state, setState] = useState({
-    // email: "",
-    // password: "",
-  // });
-
-  // const handleChange = (e) => {
-  //   const { id, value } = e.target;
-  //   setState((previousState) => ({
-  //     ...previousState,
-  //     [id]: value,
-  //   }));
-  // };
+  const navigate = useNavigate(); // Step 2: Instantiate useNavigate
 
   const userLogin = async (payload) => {
     let endpoint =  '/api/login';
-    //let endpoint =  'https://api.bhenning.com/api-login';
 
     const response = await axios.post(endpoint, payload, {
       timeout: 0,
@@ -28,8 +14,6 @@ export default function Login() {
       },
     });
 
-    // const expiryDate = new Date(new Date().getTime() + 6 * 60 * 60 * 1000).toUTCString();
-    // document.cookie = `access-token=${response.data}; path=/; expires=${expiryDate}; secure; samesite=lax`;
     return response.data;
   };
 
@@ -58,14 +42,12 @@ export default function Login() {
       let response = await userLogin(data);
       console.log("response: " + JSON.stringify(response));
       sessionStorage.setItem("isAuthenticated", true);
+      navigate("/landing"); // Step 3: Navigate to the landing page
       //localStorage.setItem("isAuthenticated", true);
       //await login(email, password);
       //navigate("/landing")
       //window.location.href = '/landing'
-      //<Navigate to="/landing" />
     } catch (error) {
-      // console.log(error.data);
-      //window.location.href = '/login'
       if (error.response && error.response.status === 403) {
         const errorMessage = document.querySelector(".error-message");
         errorMessage.innerText = "Failed login. Please check your credentials.";
