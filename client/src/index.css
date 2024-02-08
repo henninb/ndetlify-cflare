@@ -11,65 +11,48 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace
 }
 
-.form-icon {
-    font-size: 14px;
+/* Ensure input fields and icons align properly */
+.input-group-text {
+  display: flex; /* Ensures the content within aligns properly */
+  align-items: center; /* Centers the content vertically */
+  justify-content: center; /* Centers the content horizontally (useful if you adjust the width or padding) */
 }
 
+/* Adjusts the size and alignment of icons within the input group */
+.form-icon {
+  font-size: 1rem; /* Adjusts icon size to fit better with the text fields */
+}
+
+/* Custom styling for the Material Icons if used outside the input groups */
+.material-icons {
+  font-size: 24px; /* Adjust size as needed */
+  vertical-align: middle; /* Aligns icon vertically in the middle for consistency */
+}
+
+/* Styles for the form elements */
+.login-form button[type="submit"] {
+  width: 100%; /* Makes the submit button width consistent with the form fields */
+  margin-top: 1rem; /* Adds some space above the submit button */
+  background-color: #007bff; /* Example button color, adjust as needed */
+  color: white; /* Text color for the button */
+  border-radius: 0.25rem; /* Rounds the corners of the button */
+  border: none; /* Removes the default border */
+  padding: 0.5rem; /* Adds padding inside the button for better sizing */
+}
+
+.login-form button[type="submit"]:hover {
+  background-color: #0056b3; /* Darker shade for hover effect, adjust as needed */
+}
+
+/* Ensures the form itself is centered and looks good on all screen sizes */
 .login {
-    font-family: Comfortaa, cursive;
-    margin: auto;
-    padding: 8% 0 0;
-    width: 360px
+  display: flex;
+  justify-content: center; /* Centers the form horizontally */
+  align-items: center; /* Centers the form vertically */
+  min-height: 100vh; /* Ensures the form is vertically centered in the viewport */
 }
 
 .form {
-    background: #fff;
-    border-radius: 10px;
-    margin: 0 auto 100px;
-    max-width: 360px;
-    padding: 45px;
-    position: relative;
-    text-align: center;
-    z-index: 1;
-}
-
-.form input {
-    background: #f2f2f2;
-    border: 0;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-family: Comfortaa, cursive;
-    font-size: 14px;
-    margin: 0 0 15px;
-    outline: 0;
-    padding: 15px;
-    width: 100%;
-}
-
-.form input:focus {
-    background: #dbdbdb
-}
-
-.form button {
-    background: #4b6cb7;
-    border: 0;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    font-family: Comfortaa, cursive;
-    font-size: 14px;
-    outline: 0;
-    padding: 15px;
-    text-transform: uppercase;
-    transition: all .3 ease;
-    width: 100%
-}
-
-.form button:active {
-    background: #395591
-}
-
-.form span {
-    color: #4b6cb7;
-    font-size: 75px;
+  width: 100%; /* Adjust the width as necessary, potentially with a max-width for larger screens */
+  max-width: 400px; /* Maximum width of the form to ensure it doesn't stretch too much on larger screens */
 }

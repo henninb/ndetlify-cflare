@@ -75,32 +75,27 @@ export default function Login() {
   };
 
     return (
-        <div className="login">
-            <div className="form">
-                <form name="login-form" className="login-form" action="/api/login" method="POST" data-bitwarden-watching="1">
-                    <span className="material-icons">lock</span>
-                    <div className="input-group mb-3">
-                <div className="input-group-prepend">
-                 <span className="input-group-text">
-                  <i className="fa fa-user form-icon"></i>
-                 </span>
-                </div>
-                <input type="text" className="form-control" placeholder="Email" id="email" name="email" />
-             </div>
-             <div className="input-group mb-3">
-               <div className="input-group-prepend">
-                 <span className="input-group-text">
-                   <i className="fa fa-lock form-icon"></i>
-                 </span>
-               </div>
-               <input type="password" className="form-control" placeholder="Password" id="password" name="password" />
-               <div className="error-message"></div>
-             </div>
-      <button type="submit" onClick={handleClick}>
-            login
-          </button>
-                </form>
-            </div>
-        </div>
+      <div className="login">
+  <div className="form">
+    <form name="login-form" className="login-form" action="/api/login" method="POST" data-bitwarden-watching="1">
+      <div className="input-group mb-3">
+        <span className="input-group-text">
+          <i className="fa fa-user form-icon"></i>
+        </span>
+        <input type="text" className="form-control" placeholder="Email" id="email" name="email" />
+      </div>
+      <div className="input-group mb-3">
+        <span className="input-group-text">
+          <i className="fa fa-lock form-icon"></i>
+        </span>
+        <input type="password" className="form-control" placeholder="Password" id="password" name="password" />
+        <div className="error-message"></div>
+      </div>
+      <button type="submit" className="btn btn-primary" onClick={handleClick}>
+        Login
+      </button>
+    </form>
+  </div>
+</div>
     );
 };
