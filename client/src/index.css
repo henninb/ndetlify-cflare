@@ -11,26 +11,6 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace
 }
 
-@media (max-width: 768px) {
-    .navbar-toggler {
-        display: block; /* Show the toggler on small screens */
-    }
-
-    .navbar-collapse {
-        display: none; /* Hide the menu items initially */
-    }
-
-    .navbar-collapse.show {
-        display: block; /* Show the menu items when toggled */
-    }
-}
-
-@media (min-width: 769px) {
-    .navbar-toggler {
-        display: none; /* Hide the toggler on larger screens */
-    }
-}
-
 .form-icon {
     font-size: 14px;
 }
