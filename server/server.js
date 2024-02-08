@@ -22,7 +22,7 @@ app.use((_request, response, next) => {
 app.use(express.static(path.join(__dirname, 'public'), {
 }));
 
-app.get(/^(?!\/api).*/, (_request, response) => {
+app.get(/^(?!\/api|img).*/, (_request, response) => {
     response.sendFile(path.join(__dirname+'/public/index.html'));
 });
 

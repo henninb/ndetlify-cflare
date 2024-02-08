@@ -5,18 +5,15 @@ export default class App extends Component {
     constructor(props) {
     super(props);
 
-        // Initialize isAuthenticated from sessionStorage
     this.state = {
       isAuthenticated: sessionStorage.getItem('isAuthenticated') === 'true', // Convert the string to a boolean
     };
   }
 
-  // Add event listeners when the component mounts
   componentDidMount() {
     window.addEventListener('storage', this.handleStorageChange);
   }
 
-  // Remove event listeners when the component unmounts
   componentWillUnmount() {
     window.removeEventListener('storage', this.handleStorageChange);
   }
@@ -39,7 +36,8 @@ export default class App extends Component {
 
     return (
       <div>
-  <nav className="navbar navbar-expand-lg navbar-dark primary-color">
+    {/* <nav className="navbar navbar-expand-lg navbar-dark primary-color">  */}
+  <nav className="navbar navbar-expand-lg navbar-light primary-color">
     {/* Toggle button for mobile view */}
     <button
       className="navbar-toggler"
@@ -63,9 +61,6 @@ export default class App extends Component {
         </li>
         <li className="nav-item">
           <a className="nav-link" href="/landing">Landing</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="/test">Test</a>
         </li>
         <li className="nav-item">
           <a className="nav-link" href="/about">About</a>
