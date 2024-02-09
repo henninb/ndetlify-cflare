@@ -84,31 +84,31 @@ export default function Home() {
                 </a>
 
                 <a href="portfolio-item.html" class="portfolio__item">
-                    <img src="img/portfolio-04.jpg" alt="" class="portfolio__img" />
+                    <img src="img/portfolio-04.jpg" alt="item4" class="portfolio__img" />
                 </a>
 
                 <a href="portfolio-item.html" class="portfolio__item">
-                    <img src="img/portfolio-05.jpg" alt="" class="portfolio__img" />
+                    <img src="img/portfolio-05.jpg" alt="item5" class="portfolio__img" />
                 </a>
 
                 <a href="portfolio-item.html" class="portfolio__item">
-                    <img src="img/portfolio-06.jpg" alt="" class="portfolio__img" />
+                    <img src="img/portfolio-06.jpg" alt="item6" class="portfolio__img" />
                 </a>
 
                 <a href="portfolio-item.html" class="portfolio__item">
-                    <img src="img/portfolio-07.jpg" alt="" class="portfolio__img" />
+                    <img src="img/portfolio-07.jpg" alt="item7" class="portfolio__img" />
                 </a>
 
-                <a href="#" class="portfolio__item">
-                    <img src="img/portfolio-08.jpg" alt="" class="portfolio__img" />
+                <a href="portfolio-item.html" class="portfolio__item">
+                    <img src="img/portfolio-08.jpg" alt="item8" class="portfolio__img" />
                 </a>
 
-                <a href="#" class="portfolio__item">
-                    <img src="img/portfolio-09.jpg" alt="" class="portfolio__img" />
+                <a href="portfolio-item.html" class="portfolio__item">
+                    <img src="img/portfolio-09.jpg" alt="item9" class="portfolio__img" />
                 </a>
 
-                <a href="#" class="portfolio__item">
-                    <img src="img/portfolio-10.jpg" alt="" class="portfolio__img" />
+                <a href="portfolio-item.html" class="portfolio__item">
+                    <img src="img/portfolio-10.jpg" alt="item0" class="portfolio__img" />
                 </a>
             </div>
         </section>
