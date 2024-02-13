@@ -37,17 +37,17 @@ export default function Home() {
             <div class="services">
                 <div class="service">
                     <h3>Software Development</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>As a software developer, I've led and contributed to projects that span across various programming languages and technologies. My experience encompasses developing robust software solutions, migrating systems to enhance efficiency and security, and innovating within the tech landscape. I take pride in my ability to adapt to technological shifts, master new skills, and apply my knowledge in practical, impactful ways. My journey from engineering to leading security-focused initiatives reflects my passion for not just meeting, but exceeding the technical and security standards expected in today's digital world.</p>
                 </div>
 
                 <div class="service">
-                    <h3>Support</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <h3>Technical Sales</h3>
+                    <p>In the realm of technical sales, I thrive on merging my deep technical knowledge with strategic sales techniques to meet the complex needs of clients. My approach involves understanding the intricacies of technology and effectively communicating its benefits to non-technical stakeholders. This skill set has enabled me to not only close deals but also build lasting relationships with clients by ensuring that the solutions I offer truly align with their objectives and challenges. My success in technical sales stems from a blend of expertise, adaptability, and a genuine commitment to solving customer problems.</p>
                 </div>
 
                 <div class="service">
                     <h3>Cyber Security</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>In my role focusing on cybersecurity, I have spearheaded initiatives to significantly improve system security, demonstrating my capability to identify vulnerabilities and implement strategic defenses. My efforts have resulted in enhanced secure coding practices and a notable increase in security metrics, reflecting my commitment to safeguarding sensitive information and systems. My work emphasizes proactive problem-solving and a deep understanding of the cybersecurity landscape, ensuring compliance and protection against evolving threats.</p>
                 </div>
             </div>
 
@@ -59,8 +59,7 @@ export default function Home() {
            <p class="section__subtitle section__subtitle--about">Technical seller based out of Minneapolis</p>
 
            <div class="about-me__body">
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+               <p>I'm Brian Henning, a seasoned professional in the realms of software development, sales, and cybersecurity. My journey has been marked by a dedication to creating innovative software solutions, a knack for strategically closing sales, and a commitment to enhancing cybersecurity measures. My role as a solutions engineer has allowed me to blend my technical expertise with my ability to understand and meet customer needs, driving sustainable growth and securing key deals. In cybersecurity, I've led initiatives that significantly bolstered system security, showcasing my ability to navigate complex challenges and implement robust protections. This blend of skills underscores my holistic approach to tackling today's digital challenges, aiming to contribute meaningfully to the success of the organizations I work with.</p>
            </div>
 
            <img src="img/brian-with-maggie.jpg" alt="Brian with one of his 3 daughters" class="about-me__img" />
