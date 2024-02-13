@@ -37,7 +37,7 @@ export default function Home() {
             <div class="services">
                 <div class="service">
                     <h3>Software Development</h3>
-                    <p>As a software developer, I've led and contributed to projects that span across various programming languages and technologies. My experience encompasses developing robust software solutions, migrating systems to enhance efficiency and security, and innovating within the tech landscape. I take pride in my ability to adapt to technological shifts, master new skills, and apply my knowledge in practical, impactful ways. My journey from engineering to leading security-focused initiatives reflects my passion for not just meeting, but exceeding the technical and security standards expected in today's digital world.</p>
+                    <p style={{ textAlign: 'left' }}>As a software developer, I've led and contributed to projects that span across various programming languages and technologies. My experience encompasses developing robust software solutions, migrating systems to enhance efficiency and security, and innovating within the tech landscape. I take pride in my ability to adapt to technological shifts, master new skills, and apply my knowledge in practical, impactful ways. My journey from engineering to leading security-focused initiatives reflects my passion for not just meeting, but exceeding the technical and security standards expected in today's digital world.</p>
                 </div>
 
                 <div class="service">
