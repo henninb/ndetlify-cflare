@@ -81,13 +81,6 @@ export default function Home() {
                     <img src="img/portfolio-08.jpg" alt="item8" class="portfolio__img" />
                 </a>
 
-                <a href="portfolio-item.html" class="portfolio__item">
-                    <img src="img/portfolio-09.jpg" alt="item9" class="portfolio__img" />
-                </a>
-
-                <a href="portfolio-item.html" class="portfolio__item">
-                    <img src="img/portfolio-10.jpg" alt="item0" class="portfolio__img" />
-                </a>
             </div>
         </section>
 
