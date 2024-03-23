@@ -9,3 +9,7 @@ curl -X POST https://www.bhenning.com/api/login -H "Content-Type: application/js
 
 # website
 https://www.bhenning.com
+
+
+# docker
+todo -- tag this docker repo as bitexplorer/react-app
