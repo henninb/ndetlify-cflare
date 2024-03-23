@@ -60,15 +60,32 @@ app.post('/api/login', (request, response) => {
       JWT_KEY,
     );
 
-    response.set('X-Custom-Brian', '1');
+    response.set('x-custom-brian', '1');
     response.status(200).json( {
       token: token,
     });
   } else {
-    response.status(200).json({
-      accessToken: 'test',
-      roles: ['admin'],
+    response.status(403).json({
+      message: 'failed login attempt.',
     });
   }
 });
 
+
+// POST endpoint for Fahrenheit to Celsius conversion
+//  curl -X POST http://localhost:3000/api/tocelsius -H "Content-Type: application/json" -d '{"fahrenheit":32}'
+app.post('/api/tocelsius', (req, res) => {
+  // Extract Fahrenheit temperature from request body
+  const { fahrenheit } = req.body;
+
+  // Check if Fahrenheit temperature is provided
+  if (!fahrenheit) {
+    return res.status(400).json({ error: 'Fahrenheit temperature is required' });
+  }
+
+  // Convert Fahrenheit to Celsius
+  const celsius = (fahrenheit - 32) * (5/9);
+
+  // Send the result back
+  res.json({ celsius });
+});
