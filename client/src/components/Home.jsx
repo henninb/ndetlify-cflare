@@ -3,27 +3,6 @@ import './Home.css';
 export default function Home() {
     return (
       <div>
-           <header>
-            <div class="logo">
-                <img src="img/brian-blocks.png" alt="" />
-            </div>
-            <div class="navigation">
-            <div class="userBx">
-               <div class="imgBx">
-                <img src="img/photo-brian-henning-nobackground.png" alt="user avatar" />
-              </div>
-              <p class="username">Profile</p>
-           </div>
-            <span class="menuToggle"></span>
-                <ul class="menu">
-                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
-                </ul>
-            </div>
-        </header>
-
         <section class="intro" id="home">
             <h1 class="section__title section__title--intro">
                 Hi, I am <strong>Brian Henning</strong>
@@ -36,18 +15,18 @@ export default function Home() {
             <h2 class="section__title section__title--services">What I do</h2>
             <div class="services">
                 <div class="service">
-                    <h3>Software Development</h3>
-                    <p style={{ textAlign: 'left' }}>As a software developer, I've led and contributed to projects that span across various programming languages and technologies. My experience encompasses developing robust software solutions, migrating systems to enhance efficiency and security, and innovating within the tech landscape. I take pride in my ability to adapt to technological shifts, master new skills, and apply my knowledge in practical, impactful ways. My journey from engineering to leading security-focused initiatives reflects my passion for not just meeting, but exceeding the technical and security standards expected in today's digital world.</p>
+                    <h3 class="service-header"><b>Software Development</b></h3>
+                    <p>As a software developer, I've led and contributed to projects involving diverse programming languages and technologies, developing robust solutions, enhancing efficiency and security through system migrations, and innovating within the tech landscape. Adapting to technological shifts, mastering new skills, and exceeding technical and security standards in today's digital world drive my journey from engineering to leading security-focused initiatives.</p>
                 </div>
 
                 <div class="service">
-                    <h3>Technical Sales</h3>
-                    <p>In the realm of technical sales, I thrive on merging my deep technical knowledge with strategic sales techniques to meet the complex needs of clients. My approach involves understanding the intricacies of technology and effectively communicating its benefits to non-technical stakeholders. This skill set has enabled me to not only close deals but also build lasting relationships with clients by ensuring that the solutions I offer truly align with their objectives and challenges. My success in technical sales stems from a blend of expertise, adaptability, and a genuine commitment to solving customer problems.</p>
+                    <h3 class="service-header"><b>Technical Sales</b></h3>
+                    <p>In technical sales, I merge deep technical knowledge with strategic sales techniques to meet client needs. Understanding technology intricacies and effectively communicating benefits to non-technical stakeholders allows me to close deals and build lasting client relationships. My success stems from expertise, adaptability, and genuine commitment to solving customer problems.</p>
                 </div>
 
                 <div class="service">
-                    <h3>Cyber Security</h3>
-                    <p>In my role focusing on cybersecurity, I have spearheaded initiatives to significantly improve system security, demonstrating my capability to identify vulnerabilities and implement strategic defenses. My efforts have resulted in enhanced secure coding practices and a notable increase in security metrics, reflecting my commitment to safeguarding sensitive information and systems. My work emphasizes proactive problem-solving and a deep understanding of the cybersecurity landscape, ensuring compliance and protection against evolving threats.</p>
+                    <h3 class="service-header"><b>Cyber Security</b></h3>
+                    <p>In my cybersecurity role, I lead initiatives to improve system security, identifying vulnerabilities and implementing strategic defenses. Efforts have boosted secure coding practices and security metrics, showing dedication to safeguarding information. Emphasizing proactive problem-solving and deep cybersecurity understanding ensures compliance and protection against evolving threats.</p>
                 </div>
             </div>
 
