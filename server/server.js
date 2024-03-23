@@ -47,7 +47,7 @@ app.get('/api/nhl', (_request, response) => {
 app.post('/api/login', (request, response) => {
   console.log('body:', request.body);
   const { email, password } = request.body;
-  console.log('email:', request.body.email);
+  // console.log('email:', request.body.email);
 
   if (email === EMAIL && password === PASSWORD) {
     const token = jwt.sign(
@@ -88,4 +88,42 @@ app.post('/api/tocelsius', (req, res) => {
 
   // Send the result back
   res.json({ celsius });
+});
+
+
+// Function to calculate Easter Sunday
+function calculateEasterSunday(year) {
+    const a = year % 19;
+    const b = Math.floor(year / 100);
+    const c = year % 100;
+    const d = Math.floor(b / 4);
+    const e = b % 4;
+    const f = Math.floor((b + 8) / 25);
+    const g = Math.floor((b - f + 1) / 3);
+    const h = (19 * a + b - d - g + 15) % 30;
+    const i = Math.floor(c / 4);
+    const k = c % 4;
+    const l = (32 + 2 * e + 2 * i - h - k) % 7;
+    const m = Math.floor((a + 11 * h + 22 * l) / 451);
+    const month = Math.floor((h + l - 7 * m + 114) / 31);
+    const day = ((h + l - 7 * m + 114) % 31) + 1;
+    return new Date(year, month - 1, day);
+}
+
+// POST endpoint for computing Easter Sunday
+// curl -X POST http://localhost:3000/api/easter -H "Content-Type: application/json" -d '{"year":2024}'
+app.post('/api/easter', (req, res) => {
+    // Extract year from request body
+    const { year } = req.body;
+
+    // Check if year is provided
+    if (!year) {
+        return res.status(400).json({ error: 'Year is required' });
+    }
+
+    // Calculate Easter Sunday
+    const easterSunday = calculateEasterSunday(year);
+
+    // Send the result back
+    res.json({ easterSunday });
 });
