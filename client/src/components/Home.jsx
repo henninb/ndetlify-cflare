@@ -113,6 +113,16 @@ export default function Home() {
                         <i class="fab fa-github"></i>
                     </a>
                 </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://gitlab.com/henninb">
+                        <i class="fab fa-gitlab"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://reddit.com/user/z037640">
+                        <i class="fab fa-reddit"></i>
+                    </a>
+                </li>
             </ul>
         </footer>
       </div>
