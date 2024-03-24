@@ -14,3 +14,8 @@ https://www.bhenning.com
 
 # docker
 todo -- tag this docker repo as bitexplorer/react-app
+
+# gcp container updload
+gcloud compute instances create-with-container owasp-juice-shop-app --container-image bkimminich/juice-shop
+gcloud compute firewall-rules create juice-rule --allow tcp:3000
+
