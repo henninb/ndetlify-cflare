@@ -5,3 +5,4 @@ node_modules
 readme.md
 .git
 .gitignore
+*.sh
