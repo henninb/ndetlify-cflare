@@ -3,8 +3,10 @@
 TOKEN=$(cat token)
 docker context create remote-webserver --docker "host=ssh://henninb@192.168.10.15"
 #npm install
+mkdir -p ssl
 npm run build
 docker build -t react-app .
+docker build -f Dockerfile-nginx -t react-app-nginx .
 docker save react-app | docker --context remote-webserver load
 
 export DOCKER_HOST=tcp://192.168.10.15:2375
