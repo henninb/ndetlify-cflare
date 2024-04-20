@@ -7,3 +7,5 @@ readme.md
 .gitignore
 *.sh
 token
+Dockerfile
+Dockerfile-nginx

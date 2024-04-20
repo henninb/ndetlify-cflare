@@ -22,9 +22,19 @@ app.use((_request, response, next) => {
 app.use(express.static(path.join(__dirname, 'public'), {
 }));
 
-app.get(/^(?!\/api|img).*/, (_request, response) => {
-    response.sendFile(path.join(__dirname+'/public/index.html'));
+// Handle React routing, return all requests to React app, except api and img
+app.get(/^(?!\/api|img).*/, (request, response) => {
+  console.log("handle request");
+  // console.log(request.params);
+  // request.params.transactionId = 5;
+  // console.log(request.params);
+  // response.sendFile(path.join(__dirname+'/public'));
+  response.sendFile(path.join(__dirname+'/public/index.html'));
 });
+
+// app.get('*', (_req, res) => {
+//     res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// });
 
 app.listen(port, () => { console.log(`listening on port ${port}`) });
 
@@ -70,7 +80,6 @@ app.post('/api/login', (request, response) => {
     });
   }
 });
-
 
 // POST endpoint for Fahrenheit to Celsius conversion
 //  curl -X POST http://localhost:3000/api/tocelsius -H "Content-Type: application/json" -d '{"fahrenheit":32}'
