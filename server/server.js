@@ -54,6 +54,20 @@ app.get('/api/nhl', (_request, response) => {
     });
 });
 
+app.get('/api/nba', (_request, response) => {
+  const url = 'https://fixturedownload.com/feed/json/nba-2023/minnesota-timberwolves';
+
+  axios.get(url)
+    .then(res => {
+      // If the request is successful, send the JSON response back to the client
+      response.status(200).json(res.data);
+    })
+    .catch(error => {
+      console.error('Error fetching NHL schedule:', error);
+      response.status(500).send('Error fetching data');
+    });
+});
+
 app.post('/api/login', (request, response) => {
   console.log('body:', request.body);
   const { email, password } = request.body;

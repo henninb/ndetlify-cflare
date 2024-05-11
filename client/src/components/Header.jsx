@@ -40,6 +40,9 @@ export default function Header() {
                             <a className="nav-link" href="/">Home</a>
                         </li>
                         <li className="nav-item">
+                            <a className="nav-link" href="/nba">NBA</a>
+                        </li>
+                        <li className="nav-item">
                             <a className="nav-link" href="/nhl">NHL</a>
                         </li>
                         <li className="nav-item">
@@ -47,9 +50,6 @@ export default function Header() {
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/about">About</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/transactions/12345">Transactions123</a>
                         </li>
 
 
