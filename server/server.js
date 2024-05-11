@@ -13,8 +13,8 @@ const EMAIL = 'henninb@gmail.com'; // Replace with your email
 const PASSWORD = 'monday1'; // Replace with your password
 const JWT_KEY = 'your_jwt_key'; // Replace with your JWT key
 
-app.use((_request, response, next) => {
-  console.log("set header");
+app.use((request, response, next) => {
+  console.log(`Request URL: ${request.url}`);
   response.header("x-powered-by", "ExpressServer");
   next();
 });
@@ -24,17 +24,13 @@ app.use(express.static(path.join(__dirname, 'public'), {
 
 // Handle React routing, return all requests to React app, except api and img
 app.get(/^(?!\/api|img).*/, (request, response) => {
-  console.log("handle request");
-  // console.log(request.params);
-  // request.params.transactionId = 5;
-  // console.log(request.params);
-  // response.sendFile(path.join(__dirname+'/public'));
-  response.sendFile(path.join(__dirname+'/public/index.html'));
+  if (request.path === '/transactions/test') {
+    console.log('test transactions path')
+    response.set('X-Test-Header', 'true');
+  }
+  response.sendFile(path.join(__dirname, 'public', 'index.html'));
+  //response.sendFile(path.join(__dirname+'/public/index.html'));
 });
-
-// app.get('*', (_req, res) => {
-//     res.sendFile(path.join(__dirname, 'public', 'index.html'));
-// });
 
 app.listen(port, () => { console.log(`listening on port ${port}`) });
 
