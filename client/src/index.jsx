@@ -48,7 +48,7 @@ const router = createBrowserRouter([
       { path: '/landing', element: <Landing /> },
       { path: '/users/:userId', element: <User />, },
       // { path: 'users', element: <User />, },
-      { path: '/transactions/:accountId', element: <Transactions /> },
+      { path: '/transactions/:account', element: <Transactions /> },
       { path: '/login', element: <Login /> },
       { path: '/nhl', element: <HockeyScores /> },
       { path: '/nba', element: <BasketballScores /> },
