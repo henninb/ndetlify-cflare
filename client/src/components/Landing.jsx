@@ -16,7 +16,7 @@ export default function Landing() {
           </div>
           <style jsx>{`
               .container {
-                  text-align: center;
+                  text-align: left;
                   background-color: #fff;
                   padding: 20px;
                   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
